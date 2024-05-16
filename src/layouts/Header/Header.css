@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    max-height: 60px;
 }
 
 .header__logo {
@@ -20,8 +21,19 @@
     gap: 20px;
 }
 
-.header__list-link:hover {
-    color: #f4ec12;
+.header__item-link {
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.header__item-link:hover {
+    color: #000;
     cursor: pointer;
+    border-bottom: solid 2px #000;
+}
+
+.header__item-link--is--active {
+    color: #f4ec12;
     border-bottom: solid 2px #f4ec12;
 }
