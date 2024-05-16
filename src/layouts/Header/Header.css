@@ -1,0 +1,27 @@
+.header {
+    background: rgb(95, 141, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header__logo {
+    color: #f4ec12;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+
+.header__list-link:hover {
+    color: #f4ec12;
+    cursor: pointer;
+    border-bottom: solid 2px #f4ec12;
+}
