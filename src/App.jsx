@@ -1,10 +1,11 @@
 import './App.css'
+import RoutesIndex from './constans/Routes'
 
 function App() {
 
   return (
     <>
-      <h1>Hola</h1>
+      <RoutesIndex />
     </>
   )
 }
