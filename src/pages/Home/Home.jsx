@@ -8,7 +8,8 @@ const Home = () => {
   const getInitialData = async() => {
     try {
       const {data} = await getCharacter()
-      console.log(data)
+      const respuesta = data.data
+      console.log(respuesta)
     } catch (error) {
       alert('Error en la API')
     }
