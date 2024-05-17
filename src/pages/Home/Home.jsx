@@ -1,7 +1,9 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import getCharacter from "../../services/characterServices"
 
 const Home = () => {
+
+  const [personajes, setPersonajes] = useState([])
 
   const getInitialData = async() => {
     try {
@@ -17,7 +19,9 @@ const Home = () => {
   }, [])
 
   return (
-    <div>Home</div>
+    <>
+    {personajes.map((personaje, index) => (<p key={index}>Personaje</p>))}
+    </>
   )
 }
 
