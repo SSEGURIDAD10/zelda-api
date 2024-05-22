@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import getCharacter from "../../services/characterServices";
 import CharacterCard from "../../Components/CharacterCard";
 import CharacterList from "../../Components/CharacterList";
+import SearchBar from "../../Components/SearchBar";
 
 const Home = () => {
   const [personajes, setPersonajes] = useState([]);
@@ -22,6 +23,7 @@ const Home = () => {
 
   return (
     <>
+    <SearchBar />
       <CharacterList>
         {personajes.map((personaje, index) => (
           <CharacterCard key={personaje.id} personaje={personaje} />
