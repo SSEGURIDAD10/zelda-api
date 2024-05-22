@@ -1,0 +1,13 @@
+.dot-status {
+    height: .6rem;
+    width: .6rem;
+    margin-right: .3rem;
+    border-radius: 50%;
+    background: red;
+    align-self: center;
+    border: 1px solid #000;
+}
+
+.card-body {
+    background: #e1e1e1;
+}

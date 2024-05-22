@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import getCharacter from "../../services/characterServices";
 import CharacterCard from "../../Components/CharacterCard";
+import CharacterList from "../../Components/CharacterList";
 
 const Home = () => {
   const [personajes, setPersonajes] = useState([]);
@@ -10,7 +11,6 @@ const Home = () => {
       const { data } = await getCharacter();
       const respuesta = data.data;
       setPersonajes(respuesta);
-      console.log(respuesta);
     } catch (error) {
       alert("Error en la API");
     }
@@ -22,9 +22,11 @@ const Home = () => {
 
   return (
     <>
-      {personajes.map((personaje, index) => (
-        <CharacterCard key={personaje.id} personaje={personaje} />
-      ))}
+      <CharacterList>
+        {personajes.map((personaje, index) => (
+          <CharacterCard key={personaje.id} personaje={personaje} />
+        ))}
+      </CharacterList>
     </>
   );
 };
