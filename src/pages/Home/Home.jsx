@@ -6,10 +6,11 @@ import SearchBar from "../../Components/SearchBar";
 
 const Home = () => {
   const [personajes, setPersonajes] = useState([]);
+  const [busqueda, setBusqueda] = useState("");
 
   const getInitialData = async () => {
     try {
-      const { data } = await getCharacter();
+      const { data } = await getCharacter(busqueda);
       const respuesta = data.data;
       setPersonajes(respuesta);
     } catch (error) {
@@ -22,14 +23,14 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-    <SearchBar />
+    <div className="navbar bg-body-tertiary justify-content-evenly">
+    <SearchBar text={busqueda} setText={setBusqueda} search={getInitialData} />
       <CharacterList>
         {personajes.map((personaje, index) => (
           <CharacterCard key={personaje.id} personaje={personaje} />
         ))}
       </CharacterList>
-    </>
+    </div>
   );
 };
 
