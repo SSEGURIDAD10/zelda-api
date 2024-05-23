@@ -4,9 +4,10 @@ const SearchBar = (props) => {
   const {text, setText, search} = props
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault() //esto evita que la pagina cargue nuevamente
     search()
   }
+
   return (
     <nav className="navbar">
       <div className="container-fluid">
