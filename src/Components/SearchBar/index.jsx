@@ -8,6 +8,11 @@ const SearchBar = (props) => {
     search()
   }
 
+  const handleInputChange = (e) => {
+    console.log(e.target.value); // Muestra el valor del input en la consola
+    setText(e.target.value);
+  };
+
   return (
     <nav className="navbar">
       <div className="container-fluid">
@@ -20,7 +25,8 @@ const SearchBar = (props) => {
             id="search-imput"
             name="search"
             value={text}
-            onChange={(e) => setText(e.target.value)}
+            // onChange={(e) => setText(e.target.value)}
+            onChange={handleInputChange}
           />
           <button className="btn btn-outline-success" type="submit">
             Search
