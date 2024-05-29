@@ -11,12 +11,14 @@ const SearchBar = (props) => {
   const handleInputChange = (e) => {
     filtrar(e.target.value);
     setText(e.target.value);
-    // search();
+    search();
   };
 
   const filtrar=(terminoBusqueda)=>{
     let resultadoBusqueda = personajes.filter((elemento)=>{
-      if(elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+      if(elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      || elemento.category.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      || elemento.id.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
         return elemento;
       }
     });

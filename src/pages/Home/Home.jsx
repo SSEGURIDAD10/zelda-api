@@ -18,12 +18,7 @@ const Home = () => {
       const respuesta = data.data;
       setPersonajes(respuesta);
     } catch (error) {
-      alert(`Solo categorias:
-      creatures
-      equipment
-      materials
-      monsters
-      treasure`);
+      <h1>Error</h1>
     }
   };
 
