@@ -23,7 +23,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    getInitialData();
+    getInitialData(busqueda);
   }, []);
 
   return (
