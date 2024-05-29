@@ -18,7 +18,12 @@ const Home = () => {
       const respuesta = data.data;
       setPersonajes(respuesta);
     } catch (error) {
-      alert("Error en API");
+      alert(`Solo categorias:
+      creatures
+      equipment
+      materials
+      monsters
+      treasure`);
     }
   };
 
