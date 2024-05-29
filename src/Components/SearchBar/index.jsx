@@ -11,7 +11,7 @@ const SearchBar = (props) => {
   const handleInputChange = (e) => {
     filtrar(e.target.value);
     setText(e.target.value);
-    search();
+    // search();
   };
 
   const filtrar=(terminoBusqueda)=>{
