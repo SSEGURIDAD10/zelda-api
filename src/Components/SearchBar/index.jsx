@@ -1,7 +1,7 @@
 import React from "react";
 
 const SearchBar = (props) => {
-  const {text, setText, search} = props
+  const {text, setText, search, personajes, setPersonajes} = props
 
   const handleSubmit = (e) => {
     e.preventDefault() //esto evita que la pagina cargue nuevamente
@@ -9,9 +9,18 @@ const SearchBar = (props) => {
   }
 
   const handleInputChange = (e) => {
-    console.log(e.target.value); // Muestra el valor del input en la consola
+    filtrar(e.target.value);
     setText(e.target.value);
   };
+
+  const filtrar=(terminoBusqueda)=>{
+    let resultadoBusqueda = personajes.filter((elemento)=>{
+      if(elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+        return elemento;
+      }
+    });
+    setPersonajes(resultadoBusqueda)
+  }
 
   return (
     <nav className="navbar">

@@ -8,7 +8,6 @@ import Pagination from "../../Components/Pagination";
 // ^^^^^^IMPORT'S^^^^^^IMPORT'S^^^^^^IMPORT'S^^^^^^IMPORT'S^^^^^^
 
 const Home = () => {
-  const [usuario, setUsuarios] = useState([]);
   const [personajes, setPersonajes] = useState([]);
   const [busqueda, setBusqueda] = useState("");
   const [page, setPage] = useState(1);
@@ -33,6 +32,8 @@ const Home = () => {
         text={busqueda}
         setText={setBusqueda}
         search={getInitialData}
+        personajes={personajes}
+        setPersonajes={setPersonajes}
       />
       <Pagination page={page} setPage={setPage} />
       <CharacterList>
