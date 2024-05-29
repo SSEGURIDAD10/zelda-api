@@ -26,18 +26,18 @@ const Header = () => {
           </li>
           <li className="header__list-item">
             <NavLink
-              to="dashboard"
-              className={({ isActive }) => linkIsActive(isActive)}
-            >
-              Dashboard
-            </NavLink>
-          </li>
-          <li className="header__list-item">
-            <NavLink
               to="about"
               className={({ isActive }) => linkIsActive(isActive)}
             >
               About
+            </NavLink>
+          </li>
+          <li className="header__list-item">
+            <NavLink
+              to="dashboard"
+              className={({ isActive }) => linkIsActive(isActive)}
+            >
+              Dashboard
             </NavLink>
           </li>
         </ul>
